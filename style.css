@@ -1,64 +1,76 @@
+/* Importa as fontes Roboto e Roboto Mono do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap');
 
+/* Variáveis globais de cores e fontes */
 :root {
     --branco: white;
-    --cor-de-fundo: #00162E;
-    --fundo-senha: #00244D;
-    --fundo-texto: #001E40;
-    --borda: #0075FF;
+    --cor-de-fundo: #00162E;  /* Fundo principal da página */
+    --fundo-senha: #00244D;   /* Fundo da área onde a senha aparece */
+    --fundo-texto: #001E40;   /* Fundo dos painéis de configuração */
+    --borda: #0075FF;         /* Cor padrão de bordas e detalhes */
     --roboto: 'Roboto', sans-serif;
     --roboto-mono: 'Roboto Mono', monospace;
 }
 
+/* Define o peso padrão de todas as fontes */
 * {
     font-weight: 400;
 }
 
+/* Estilos gerais do body */
 body {
-    color: var(--branco);
-    background-color: var(--cor-de-fundo);
-    font-family: var(--roboto);
+    color: var(--branco);                     /* Cor do texto */
+    background-color: var(--cor-de-fundo);    /* Cor de fundo da página */
+    font-family: var(--roboto);               /* Fonte padrão */
 }
 
+/* Título principal */
 .titulo-principal {
-    font-family: var(--roboto-mono);
+    font-family: var(--roboto-mono);  /* Fonte monoespaçada */
     font-size: 32px;
 }
 
+/* Título secundário */
 .titulo-secundario {
     font-size: 24px;
 }
 
+/* Bloco dos títulos, centralizado */
 .conteudo-titulo {
     text-align: center;
-    margin-top: 80px;
+    margin-top: 80px;  /* Espaçamento superior grande */
 }
 
+/* Container da senha exibida */
 .conteudo-senha {
     margin-top: 80px;
     background: var(--fundo-senha);
     padding: 24px;
-    border-bottom: 6px solid var(--borda);
+    border-bottom: 6px solid var(--borda);   /* Barra colorida inferior */
 }
 
+/* Campo onde a senha aparece */
 #campo-senha {
-    background-color: var(--fundo-senha);
-    border: none;
+    background-color: var(--fundo-senha);  /* Mesma cor do container */
+    border: none;                          /* Remove borda padrão */
     color: var(--branco);
-    font-family: var(--roboto-mono);
+    font-family: var(--roboto-mono);       /* Estilo digital */
     font-size: 40px;
-    width: 70%;
+    width: 70%;                            /* Largura do campo */
 }
 
+/* Remove o contorno azul ao clicar */
 #campo-senha:focus {
     outline: none;
 }
 
+/* Define largura máxima do conteúdo e centraliza */
 .conteudo {
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* Painel de personalização */
 .parametro {
     background-color: var(--fundo-texto);
     border: 2px solid var(--borda);
@@ -66,93 +78,18 @@ body {
     padding: 24px;
 }
 
+/* Título do painel de personalização */
 .parametro-titulo {
     font-family: var(--roboto-mono);
     font-size: 28px;
 }
 
+/* Títulos menores dentro dos painéis */
 .parametro-senha__titulo {
     font-size: 24px;
 }
 
+/* Container flexível das colunas de opções */
 .parametro-coluna__senha {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.parametro-senha {
-    width: 50%;
-    margin: 0 auto;
-}
-
-.parametro-senha-botoes {
-    display: flex;
-    justify-content: center;
-}
-
-.parametro-senha__botao {
-    background-color: var(--fundo-texto);
-    color: var(--branco);
-    border: 2px solid var(--borda);
-    padding: 24px;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.parametro-senha__texto {
-    padding: 24px;
-    border-top: 2px solid var(--borda);
-    border-bottom: 2px solid var(--borda);
-    margin: 0;
-    font-size: 24px;
-}
-
-label {
-    font-size: 20px;
-}
-
-.checkbox {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-}
-
-.barra {
-    background-color: var(--fundo-senha);
-    height: 30px;
-    width: 100%;
-}
-
-.forca {
-    height: 30px;
-    position: relative;
-    bottom: 30px;
-}
-
-.fraca {
-    width: 25%;
-    background-color: #E71B32;
-}
-
-.media {
-    background-color: #FAF408;
-    width: 50%;
-}
-
-.forte {
-    background-color: #00FF85;
-    width: 100%;
-}
-
-.parametro-senha-textos {
-    display: flex;
-    justify-content: space-between;
-}
-
-
-@media screen and (min-width: 768px) {
-    .parametro-coluna__senha {
-        flex-direction: row;
-    }
-}
+    flex-direction: column;        /* Em tela*

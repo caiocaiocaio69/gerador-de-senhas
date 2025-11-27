@@ -2,66 +2,90 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gerador de senha</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> <!-- Define o padrão de caracteres (UTF-8 suporta acentos) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Torna a página responsiva -->
+    <title>Gerador de senha</title> <!-- Título exibido na aba do navegador -->
+    <link rel="stylesheet" href="style.css"> <!-- Arquivo CSS externo -->
 </head>
 
 <body>
+    <!-- Seção principal que contém todo o conteúdo -->
     <section class="conteudo">
+
+        <!-- Cabeçalho do gerador -->
         <div class="conteudo-titulo">
-            <img src="unlock.svg" alt="cadeado fechado">
-            <h2 class="titulo-principal">Gerador de senhas</h2>
+            <img src="unlock.svg" alt="cadeado fechado"> <!-- Ícone ilustrativo -->
+            <h2 class="titulo-principal">Gerador de senhas</h2> <!-- Título da página -->
             <h3 class="titulo-secundario">Gere instantaneamente uma senha aleatória e segura</h3>
         </div>
+
+        <!-- Campo onde a senha gerada será exibida -->
         <div class="conteudo-senha">
             <label for="senha">Senha</label>
-            <input name="senha" type="text" id="campo-senha" readonly>
+            <input name="senha" type="text" id="campo-senha" readonly> <!-- readonly impede edição manual -->
         </div>
+
+        <!-- Área de personalização -->
         <div class="parametro">
             <h3 class="parametro-titulo">Personalize sua senha</h3>
+
             <div class="parametro-coluna__senha">
+
+                <!-- Controle de número de caracteres -->
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Número de caracteres</h4>
+
                     <div class="parametro-senha-botoes">
-                        <button class="parametro-senha__botao">-</button>
-                        <p class="parametro-senha__texto">12</p>
-                        <button class="parametro-senha__botao">+</button>
+                        <button class="parametro-senha__botao">-</button> <!-- Botão para diminuir -->
+                        <p class="parametro-senha__texto">12</p> <!-- Valor inicial -->
+                        <button class="parametro-senha__botao">+</button> <!-- Botão para aumentar -->
                     </div>
                 </div>
+
+                <!-- Características da senha -->
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Características da senha</h4>
+
                     <div class="parametro-senha-checkbox">
-                        <input name="maiusculo" type="checkbox" class="checkbox" checked>
+                        <input name="maiusculo" type="checkbox" class="checkbox" checked> <!-- Ativado por padrão -->
                         <label for="maiusculo">Letras maiúsculas</label>
                     </div>
+
                     <div class="parametro-senha-checkbox">
                         <input name="minusculo" type="checkbox" class="checkbox">
                         <label for="minusculo">Letras minúsculas</label>
                     </div>
+
                     <div class="parametro-senha-checkbox">
                         <input name="numero" type="checkbox" class="checkbox">
                         <label for="numero">Números</label>
                     </div>
+
                     <div class="parametro-senha-checkbox">
                         <input name="simbolo" type="checkbox" class="checkbox">
                         <label for="simbolo">Símbolos</label>
                     </div>
                 </div>
+
+                <!-- Indicador visual de força da senha -->
                 <div class="parametro-senha">
                     <h4 class="parametro-senha__titulo">Força da senha</h4>
-                    <div class="barra"></div>
-                    <div class="forca fraca"></div>
+
+                    <div class="barra"></div> <!-- Fundo da barra -->
+                    <div class="forca fraca"></div> <!-- Barra que muda conforme a força da senha -->
+
                     <div class="parametro-senha-textos">
                         <p>Fraca</p>
                         <p>Média</p>
                         <p>Forte</p>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
+
+    <!-- Arquivo de JavaScript que implementará a lógica do gerador -->
     <script src="main.js"></script>
 </body>
 
